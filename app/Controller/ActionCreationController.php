@@ -81,9 +81,10 @@ class ActionCreationController extends BaseController
             'colors_list' => $this->colorModel->getList(),
             'categories_list' => $this->categoryModel->getList($project['id']),
             'links_list' => $this->linkModel->getList(0, false),
-            'priorities_list' => $this->projectModel->getPriorities($project),
+            'priorities_list' => $this->projectTaskPriorityModel->getPriorities($project),
             'project' => $project,
             'available_actions' => $this->actionManager->getAvailableActions(),
+            'swimlane_list' => $this->swimlaneModel->getList($project['id']),
             'events' => $this->actionManager->getCompatibleEvents($values['action_name']),
         )));
     }
