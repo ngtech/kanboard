@@ -35,6 +35,16 @@
                 </td>
                 <td>
                     <?= $this->url->link($this->text->e($task['title']), 'TaskViewController', 'show', array('task_id' => $task['id'], 'project_id' => $task['project_id']), false, '', t('View this task')) ?>
+
+                    <!--
+                    <br />
+                    <u>Sub Tasks:</u>
+  
+                    <ol>
+                        <li>SubTask #1: </li>
+                        <li>SubTask #2: </li>
+                    </ol>
+`                   -->
                 </td>
                 <td>
                     <?php if ($task['assignee_username']): ?>
